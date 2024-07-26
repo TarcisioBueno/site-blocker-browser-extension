@@ -13,5 +13,8 @@
   "devDependencies": {
     "@types/chrome": "^0.0.269",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "detect-url-change": "^1.0.2"
   }
 }
