@@ -1,4 +1,5 @@
 "use strict";
+// listen for changes
 window.onload = () => {
     /*chrome.runtime.sendMessage({ message: "getBlockShorts" }, (response) => {
         alert(response.message);
