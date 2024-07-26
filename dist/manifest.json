@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Click to run",
+  "version": "1.0",
+  "permissions": ["storage"],
+  "icons": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+  },
+  "background": {
+      "service_worker": "background.js"
+  },
+  "content_scripts": [
+      {
+          "js": ["./scripts/content.js"],
+          "matches": ["https://www.youtube.com/shorts/*"]
+      }
+  ],
+  "action": {
+      "default_popup": "./popup/popup.html",
+      "default_icon": {
+          "16": "images/icon.png",
+          "32": "images/icon.png",
+          "48": "images/icon.png",
+          "128": "images/icon.png"
+      }
+  }
+}
