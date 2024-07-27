@@ -39,10 +39,10 @@ async function checkURL() {
 
             chrome.storage.local.get('blockTerms', (blockTermsResult) => {
 
-                let terms:string[] = blockTermsResult.blockTerms;
-    
-    
+                let terms: string[] = blockTermsResult.blockTerms.map((term: string) => term.trim());
+
                 terms.forEach((term) => {
+                    console.log(term)
                     if (tab.url?.includes(term)) {
                         chrome.tabs.update(
                             tab.id!,

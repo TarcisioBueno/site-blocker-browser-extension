@@ -48,9 +48,10 @@ function checkURL() {
             console.log(tab.url);
             chrome.storage.local.get('redirectUrl', (redirectUrlResult) => {
                 chrome.storage.local.get('blockTerms', (blockTermsResult) => {
-                    let terms = blockTermsResult.blockTerms;
+                    let terms = blockTermsResult.blockTerms.map((term) => term.trim());
                     terms.forEach((term) => {
                         var _a;
+                        console.log(term);
                         if ((_a = tab.url) === null || _a === void 0 ? void 0 : _a.includes(term)) {
                             chrome.tabs.update(tab.id, { url: redirectUrlResult.redirectUrl }, () => { console.log(redirectUrlResult.redirectUrl); });
                         }
