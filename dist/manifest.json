@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Click to run",
+  "name": "Youtube Productivity Extension",
   "version": "1.0",
-  "permissions": ["storage"],
+  "permissions": ["storage","tabs","activeTab"],
   "icons": {
       "16": "images/icon.png",
       "32": "images/icon.png",

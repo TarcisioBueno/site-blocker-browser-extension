@@ -3,11 +3,28 @@
     <head>
     
     <link rel="stylesheet" href="popup.css"/>
+
     </head>
     <body>
     
-    <input id="allowShortsCheckBox" type="checkbox"/>
-    <label for="allowShortsCheckBox">Block shorts</label>
+    <div class="container">
+        <div class="titleContainer">
+        <h1 class="title inter-header">Extension Options</h1>
+        </div>
+        <div class="inputGroup">
+            <input class="checkBox" id="allowShortsCheckBox" type="checkbox"/>
+            <label class="checkBoxLabel inter-label" for="allowShortsCheckBox">Block Youtube Shorts</label>
+        </div>
+        <div class="blockSiteInputGroup">
+        <label class="inter-label" for="blockTerms">Block sites with: </label>
+        <input class="textInput" type="text" id="blockTerms" placeholder="e.g.: youtube.com/shorts, reels, hello.com, example.com, ...">
+        <span class="extraInformation">*Add sites/terms separeted by comma.</span>
+        </div>
+        <div class="padding-top-16 blockSiteInputGroup">
+        <label class="inter-label" for="redirectUrl">Redirect website: </label>
+        <input class="textInput" type="text" id="redirectUrl" placeholder="e.g.: https://www.google.com/">
+        </div>
+    </div>
     
     <script src="popup.js"></script>
     </body>

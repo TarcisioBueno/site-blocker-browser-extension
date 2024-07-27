@@ -15,6 +15,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "detect-url-change": "^1.0.2"
+    "detect-url-change": "^1.0.2",
+    "url-change-event": "^0.1.7"
   }
 }

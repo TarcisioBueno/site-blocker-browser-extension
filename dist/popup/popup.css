@@ -1,4 +1,90 @@
 body {
-    width:200px;
+    width:300px;
     height:300px;
+    padding: 16px;
+    color:dimgrey;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    border-bottom: black solid 1px;
+}
+
+.blockSiteInputGroup{
+    display:flex;
+    flex-direction: column;
+}
+
+.inputGroup{
+    flex-grow: 1;
+    display: flex;
+    padding: 16px 0px 8px 0px;
+    align-items: center;
+}
+
+.checkBoxLabel{
+    flex-grow:1;
+    padding: 8px;
+}
+
+.checkBox{
+    height:16px;
+    width: 16px;
+}
+
+.inter-header {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+.inter-label {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Adjust the weight as needed */
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+.textInput {
+    margin: 16px 0px 4px 0px;
+    padding: 4px 8px 4px 8px;
+}
+
+.extreInformation{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Adjust the weight as needed */
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+    font-size: 10px;
+}
+
+
+.textInput::placeholder {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Adjust the weight as needed */
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+.padding-top-16 {
+    padding-top: 16px;
 }
