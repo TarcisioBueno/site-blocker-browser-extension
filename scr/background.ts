@@ -1,5 +1,5 @@
 chrome.runtime.onInstalled.addListener(function () {
-    chrome.storage.local.set({ 'blockShorts': 'false', 'blockTerms': [],'redirectUrl':'https://www.google.com/'});
+    chrome.storage.local.set({ 'blockShorts': 'true', 'blockTerms': ['youtube.com/shorts'],'redirectUrl':'https://www.google.com/'});
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -32,8 +32,7 @@ async function getCurrentTab(): Promise<chrome.tabs.Tab | undefined> {
 async function checkURL() {
     let tab = await getCurrentTab();
     if (tab) {
-        console.log("I am here")
-        console.log(tab.url)
+
 
         chrome.storage.local.get('redirectUrl',(redirectUrlResult)=>{
 
@@ -42,7 +41,7 @@ async function checkURL() {
                 let terms: string[] = blockTermsResult.blockTerms.map((term: string) => term.trim());
 
                 terms.forEach((term) => {
-                    console.log(term)
+
                     if (tab.url?.includes(term)) {
                         chrome.tabs.update(
                             tab.id!,

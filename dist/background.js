@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 chrome.runtime.onInstalled.addListener(function () {
-    chrome.storage.local.set({ 'blockShorts': 'false', 'blockTerms': [], 'redirectUrl': 'https://www.google.com/' });
+    chrome.storage.local.set({ 'blockShorts': 'false', 'blockTerms': ['youtube.com/shorts'], 'redirectUrl': 'https://www.google.com/' });
 });
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.message === "getBlockShorts") {
@@ -44,14 +44,11 @@ function checkURL() {
     return __awaiter(this, void 0, void 0, function* () {
         let tab = yield getCurrentTab();
         if (tab) {
-            console.log("I am here");
-            console.log(tab.url);
             chrome.storage.local.get('redirectUrl', (redirectUrlResult) => {
                 chrome.storage.local.get('blockTerms', (blockTermsResult) => {
                     let terms = blockTermsResult.blockTerms.map((term) => term.trim());
                     terms.forEach((term) => {
                         var _a;
-                        console.log(term);
                         if ((_a = tab.url) === null || _a === void 0 ? void 0 : _a.includes(term)) {
                             chrome.tabs.update(tab.id, { url: redirectUrlResult.redirectUrl }, () => { console.log(redirectUrlResult.redirectUrl); });
                         }
