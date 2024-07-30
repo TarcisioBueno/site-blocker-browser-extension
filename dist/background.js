@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 chrome.runtime.onInstalled.addListener(function () {
-    chrome.storage.local.set({ 'blockShorts': 'false', 'blockTerms': ['youtube.com/shorts'], 'redirectUrl': 'https://www.google.com/' });
+    chrome.storage.local.set({ 'blockShorts': true, 'blockTerms': ['youtube.com/shorts'], 'redirectUrl': 'https://www.google.com/' });
 });
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.message === "getBlockShorts") {
