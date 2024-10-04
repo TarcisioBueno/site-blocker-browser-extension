@@ -30,4 +30,4 @@ To use the Website Blocker Extension, follow these steps:
    - Enter the URL where you would like to redirect blocked sites.
 
 ## Technologies Used
-- **JavaScript**: The extension is built entirely with vanilla JavaScript.
+- **TypeScript**: The extension is built entirely with TypeScript.
