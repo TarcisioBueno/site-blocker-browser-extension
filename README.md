@@ -3,7 +3,10 @@
 ## Overview
 This browser extension allows users to block websites based on URLs or keywords that are part of a blacklist. When a user attempts to visit a blocked site, the extension automatically redirects them to a specified website of their choice. It provides a simple yet effective way to control browsing behavior and manage distractions.
 
-![alt text](extension_image.png)
+<p align="center">
+  <img src="extension_image.png" alt="Description of image">
+</p>
+
 
 ## Features
 - **URL Blocking**: Block specific websites by adding their URLs to a customizable blacklist.
